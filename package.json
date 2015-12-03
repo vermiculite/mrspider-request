@@ -1,0 +1,33 @@
+{
+  "name": "mrspider-request",
+  "version": "0.0.1",
+  "description": "middleware for mrspider",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vermiculite/mrspider-request.git"
+  },
+  "keywords": [
+    "middleware",
+    "request",
+    "mrspider"
+  ],
+  "author": "Sean Hayes <seanowenhayes@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vermiculite/mrspider-request/issues"
+  },
+  "homepage": "https://github.com/vermiculite/mrspider-request#readme",
+  "dependencies": {
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "nock": "^3.3.2",
+    "sinon": "^1.17.2"
+  }
+}
