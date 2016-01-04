@@ -4,7 +4,10 @@
   "description": "middleware for mrspider",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/_mocha --ui bdd --reporter spec --recursive ./test"
+    "test": "mocha --recursive",
+    "test-watch": "mocha --recursive --watch",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha --check-leaks test/ --recursive",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,7 @@
   },
   "devDependencies": {
     "chai": "^3.4.1",
+    "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
     "nock": "^3.3.2",
     "sinon": "^1.17.2"
