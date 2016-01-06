@@ -1,4 +1,4 @@
-var mrspiderRequest = require('..');
+var mrspiderRequest = require('..')();
 var nock = require('nock');
 var sinon = require('sinon');
 var chai = require('chai');

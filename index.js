@@ -11,15 +11,23 @@ var HEADERS = {
 };
 
 
-module.exports = function (page, spider, next) {
+module.exports = function(options) {
 
-    request({
-        uri: page.url,
-        headers: HEADERS,
-        method: 'GET'
-    }, function (err, response, body) {
-        page.setContent(body);
-        page.response = response;
-        next();
-    });
+    options = options || {};
+    var headers = options.headers || HEADERS;
+    var encoding = options.encoding || 'utf8';
+
+    return function (page, spider, next) {
+
+        request({
+            uri: page.url,
+            headers: headers,
+            method: 'GET',
+            encoding: encoding
+        }, function (err, response, body) {
+            page.setContent(body);
+            page.response = response;
+            next();
+        });
+    }
 };
