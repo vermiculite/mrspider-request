@@ -1,3 +1,6 @@
+"use strict";
+
+let through2 = require('through2');
 var request = require('request');
 
 var HEADERS = {
@@ -17,7 +20,7 @@ module.exports = function(options) {
     var headers = options.headers || HEADERS;
     var encoding = options.encoding || 'utf8';
 
-    return function (page, spider, next) {
+    return through2.obj(function (page, next) {
 
         request({
             uri: page.url,
@@ -25,9 +28,9 @@ module.exports = function(options) {
             method: 'GET',
             encoding: encoding
         }, function (err, response, body) {
-            page.setContent(body);
+            page.content = body;
             page.response = response;
             next();
         });
-    }
+    })
 };
