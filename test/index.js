@@ -16,7 +16,7 @@ describe('mrspider-request', function(done) {
             url: address,
             setContent: sinon.spy()
         };
-        mrspiderRequest._transform(page, function() {
+        mrspiderRequest._transform(page, 'utf8', function() {
             page.setContent.calledOnce.should.equal(true);
             page.setContent.firstCall.args[0].should.equal(html);
             done();

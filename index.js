@@ -20,7 +20,7 @@ module.exports = function(options) {
     var headers = options.headers || HEADERS;
     var encoding = options.encoding || 'utf8';
 
-    return through2.obj(function (page, next) {
+    return through2.obj(function (page, enc, next) {
 
         request({
             uri: page.url,
