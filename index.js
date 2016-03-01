@@ -27,7 +27,7 @@ module.exports = function(options) {
             headers: headers,
             method: 'GET',
             encoding: encoding
-        }, function (err, response, body) {
+        }, (err, response, body) => {
             page.content = body;
             page.response = response;
             this.push(page);
