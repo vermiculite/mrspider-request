@@ -30,6 +30,7 @@ module.exports = function(options) {
         }, function (err, response, body) {
             page.content = body;
             page.response = response;
+            this.push(page);
             next();
         });
     })
