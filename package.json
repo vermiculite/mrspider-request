@@ -1,6 +1,6 @@
 {
   "name": "mrspider-request",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "middleware for mrspider",
   "main": "index.js",
   "scripts": {
