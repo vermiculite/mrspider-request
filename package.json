@@ -1,7 +1,7 @@
 {
   "name": "mrspider-request",
-  "version": "2.1.0",
-  "description": "middleware for mrspider",
+  "version": "2.1.1",
+  "description": "transform stream for mrspider",
   "main": "index.js",
   "scripts": {
     "test": "mocha --recursive",
