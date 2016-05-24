@@ -1,6 +1,6 @@
 {
   "name": "mrspider-request",
-  "version": "2.1.1",
+  "version": "2.2.1",
   "description": "transform stream for mrspider",
   "main": "index.js",
   "scripts": {
